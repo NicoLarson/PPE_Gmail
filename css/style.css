@@ -160,13 +160,14 @@ footer > a {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  height: 6rem;
+  width: 6rem;
+  padding: 1.7rem 1.3rem 0;
+  background-color: var(--color-bg-arrow-btn);
+  border-radius: 100%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
 }
 
 footer > a img {
-  width: 5rem;
-  padding: 1.2rem;
   color: var(--color-ft-main);
-  border-radius: 100%;
-  background-color: var(--color-bg-arrow-btn);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
-}
+  }
