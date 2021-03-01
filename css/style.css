@@ -58,7 +58,7 @@ main {
   align-items: flex-start;
   height: 100vh;
   padding: 8rem;
-  background: url("../imgage/home-hero.jpg") center/cover;
+  background: url("../image/home-hero.jpg") center/cover;
 }
 main h2,
 main a {
