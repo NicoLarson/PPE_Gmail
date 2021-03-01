@@ -1,0 +1,169 @@
+:root {
+  --color-bg: #fafafa;
+  --color-bg-btn: #dd5347;
+
+  --color-ft-h1: #888;
+  --color-ft-nav-select: #fff;
+  --color-bg-nav-select: #dd5347;
+  --color-ft-nav: #666;
+
+  --color-ft-main: #fff;
+
+  --color-ft-footer: #666;
+  --color-bg-form-input: rgba(0, 0, 0, 0.1);
+  --color-ft-form-submit: #fff;
+  --color-bg-form-submit: #3498db;
+}
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-bg);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.16),
+    0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+}
+header h1 {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 400;
+  color: var(--color-ft-h1);
+}
+header h1 img {
+  padding: 0 0.4rem;
+}
+
+header nav ul {
+  display: flex;
+  height: 100%;
+}
+header nav ul li a {
+  display: block;
+  padding: 2rem 4rem;
+  text-transform: uppercase;
+  color: var(--color-ft-nav);
+}
+header nav ul li a:hover {
+  color: var(--color-ft-nav-select);
+  background-color: var(--color-bg-nav-select);
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 8rem;
+  background: url("../asset/img/home-hero.jpg") center/cover;
+}
+main h2,
+main a {
+  max-width: 40vw;
+}
+main h2 {
+  font-size: 6.5rem;
+  font-weight: lighter;
+  line-height: 8rem;
+  color: var(--color-ft-main);
+}
+main a {
+  margin-top: 2rem;
+  padding: 2.2rem 4rem;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-ft-main);
+  background-color: var(--color-bg-btn);
+}
+
+/* Footer */
+footer h2,
+footer p {
+  max-width: 20%;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+footer h2,
+footer p {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--color-ft-footer);
+}
+
+footer h2 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+footer p {
+  font-size: 1.4rem;
+}
+
+footer form {
+  width: 40%;
+  margin: 1rem auto;
+}
+footer form fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem 1rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+footer form fieldset legend {
+  font-size: 2.4rem;
+  padding: 0 1rem;
+  color: var(--color-ft-footer);
+}
+footer form fieldset label {
+  padding: 0.4rem 0;
+  font-size: 1.4rem;
+}
+
+footer form fieldset input {
+  padding: 1rem 0.6rem;
+  background-color: var(--color-bg-form-input);
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+footer form fieldset input:focus {
+  outline: none;
+  box-shadow: 0 0 1rem rgb(150, 0, 0);
+}
+footer form input:last-child {
+  max-width: 100%;
+  margin: 1rem auto 0;
+  padding: 1.8rem 6rem;
+  text-transform: uppercase;
+  background-color: var(--color-bg-form-submit);
+  color: var(--color-ft-form-submit);
+  font-size: 1.4rem;
+}
+
+/* Arrow btn */
+footer > a {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+footer > a img {
+  height: 5rem;
+  width: 5.5rem;
+  padding: 1.2rem;
+  color: var(--color-ft-main);
+  border-radius: 100%;
+  background-color: var(--color-bg-btn);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
+}
