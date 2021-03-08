@@ -8,12 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let password = document.querySelector('#password')
 
 
-    let formControl = (name, firstName, mail, password) => {
-        this.name = name,
-            this.firstName = firstName,
-            this.mail = mail,
-            this.password = password
-    }
 
     // Regex test
     let nameRegex = /^[a-z ,.'-]+$/i
@@ -27,6 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
             addWarning.innerText = "Veuillez remplir tous les champs"
             addWarning.classList.add("appear")
         } else if (nameRegex.test(name.value) && nameRegex.test(firstName.value) && mailRegex.test(mail.value) && passwordRegex.test(password.value)) {
+
+            sessionStorage.setItem("name", name.value)
+            sessionStorage.setItem("firstName", firstName.value)
+            sessionStorage.setItem("mail", mail.value)
+            sessionStorage.setItem("password", password.value)
+
             addWarning.classList.remove("appear")
             document.location.assign("connection.html")
         } else {
@@ -36,11 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-
     // Warning
     let form = document.querySelector('footer form')
     let addWarning = document.createElement('p')
     addWarning.classList.add("warning")
     form.prepend(addWarning)
+
+
+
 
 })

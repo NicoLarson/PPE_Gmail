@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="#">Pour les pros</a></li>
                 <li><a href="#">Connexion</a></li>
-                <li><a href="#footer">Créer un compte</a></li>
+                <li><a href="./index.html#footer">Créer un compte</a></li>
             </ul>
         </nav>
     </header>
@@ -32,16 +32,17 @@
                 <fieldset>
                     <legend>Connectez vous à votre page</legend>
                     <label for="login">Mail ou login*</label>
-                    <input type="text" name="login" id="login" placeholder="Votre nom" area-required="true">
+                    <input type="text" name="login" id="login" placeholder="Votre nom" aria-required="true">
                     <label for="password">Choisir votre mot de passe *</label>
                     <input type="password" name="password" id="password" placeholder="Votre mot de passe"
-                        area-required="true">
-                    <input value="Connection à votre compte">
+                        aria-required="true">
+                    <input type="submit" value="Connection à votre compte">
                 </fieldset>
             </form>
         </section>
     </main>
     <script src="./js/navBar.js"></script>
+    <script src="./js/connexion.js"></script>
 </body>
 
 </html>

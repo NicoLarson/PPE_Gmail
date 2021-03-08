@@ -15,6 +15,8 @@
   --color-bg-form-submit: #165783;
 
   --color-bg-arrow-btn: #dd5347;
+
+  --color-error: #e31743;
 }
 /* Header */
 header {
@@ -85,6 +87,31 @@ main section a {
   background-color: var(--color-bg-btn);
 }
 
+/* Login Page*/
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.login-page h2 {
+  color: #fafafa;
+  margin: 8rem 0 2rem;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 400;
+  border-radius: 0.4rem;
+}
+.login-page h2.appear {
+  color: #222;
+}
+.login-page h2.error {
+  background-color: var(--color-error);
+  color: white;
+  font-size: 3.2rem;
+}
+
 /* Footer */
 footer h2,
 footer p {
@@ -118,7 +145,7 @@ footer p.warning {
   max-width: 32rem;
   margin: 0 auto 2rem;
   font-weight: bolder;
-  background-color: #e31743;
+  background-color: var(--color-error);
   color: #fafafa;
 }
 footer p.appear {
@@ -155,7 +182,7 @@ form fieldset input:focus {
   outline: none;
   box-shadow: 0 0 1rem rgb(150, 0, 0);
 }
-form input:last-child {
+form fieldset input:last-child {
   cursor: pointer;
   width: 24rem;
   margin: 1rem auto 0;
@@ -165,6 +192,11 @@ form input:last-child {
   background-color: var(--color-bg-form-submit);
   color: var(--color-ft-form-submit);
   font-size: 1.4rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+form fieldset input:last-child:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .login-page form input:last-child {
   width: 32rem;
@@ -180,7 +212,12 @@ footer > a {
   padding: 1.7rem 1.3rem 0;
   background-color: var(--color-bg-arrow-btn);
   border-radius: 100%;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);}
+
+footer > a:active{
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
 }
 
 footer > a img {
