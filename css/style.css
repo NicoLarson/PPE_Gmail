@@ -2,9 +2,12 @@
   --color-bg: #fafafa;
   --color-bg-btn: #9f281d;
 
+  --color-ft-white:#fafafa;
+  --color-ft-black:#222;
+
   --color-ft-h1: #888;
   --color-ft-nav-select: #fff;
-  --color-bg-nav-select: #dd5347;
+  --color-bg-nav-select: #9f281d;
   --color-ft-nav: #666;
 
   --color-ft-main: #fff;
@@ -14,8 +17,9 @@
   --color-ft-form-submit: #fff;
   --color-bg-form-submit: #165783;
 
-  --color-bg-arrow-btn: #dd5347;
+  --color-bg-arrow-btn: #9f281d;
 
+  --color-success:#2ecc71;
   --color-error: #e31743;
 }
 /* Header */
@@ -95,7 +99,7 @@ main section a {
   height: 100vh;
 }
 .login-page h2 {
-  color: #fafafa;
+  color: var(--color-ft-black);
   margin: 8rem 0 2rem;
   padding: 1rem 2rem;
   font-size: 4rem;
@@ -103,13 +107,16 @@ main section a {
   font-weight: 400;
   border-radius: 0.4rem;
 }
-.login-page h2.appear {
-  color: #222;
+.login-page h2.success {
+  background-color: var(--color-success);
+  color: var(--color-ft-black);
+  font-size: 3.2rem;
 }
+
 .login-page h2.error {
   background-color: var(--color-error);
-  color: white;
-  font-size: 3.2rem;
+  color: var(--color-ft-black);
+  font-size: 2.6rem;
 }
 
 /* Footer */
@@ -192,7 +199,7 @@ form fieldset input:last-child {
   background-color: var(--color-bg-form-submit);
   color: var(--color-ft-form-submit);
   font-size: 1.4rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 form fieldset input:last-child:active {
@@ -212,12 +219,12 @@ footer > a {
   padding: 1.7rem 1.3rem 0;
   background-color: var(--color-bg-arrow-btn);
   border-radius: 100%;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);}
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-footer > a:active{
+footer > a:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
 }
 
 footer > a img {
