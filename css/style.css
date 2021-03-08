@@ -1,6 +1,6 @@
 :root {
   --color-bg: #fafafa;
-  --color-bg-btn: #9F281D;
+  --color-bg-btn: #9f281d;
 
   --color-ft-h1: #888;
   --color-ft-nav-select: #fff;
@@ -15,7 +15,6 @@
   --color-bg-form-submit: #165783;
 
   --color-bg-arrow-btn: #dd5347;
-
 }
 /* Header */
 header {
@@ -38,23 +37,26 @@ header h1 img {
   padding: 0 0.4rem;
 }
 
+/* Nav Bar */
 header nav ul {
   display: flex;
   height: 100%;
 }
-header nav ul li a {
+header nav ul li a,
+.clickLight {
   display: block;
   padding: 2rem 4rem;
   text-transform: uppercase;
   color: var(--color-ft-nav);
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+.clickDark {
   color: var(--color-ft-nav-select);
   background-color: var(--color-bg-nav-select);
 }
 
 /* Main */
-main {
+main section.sign-in-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,17 +65,17 @@ main {
   padding: 8rem;
   background: url("../image/home-hero.jpg") center/cover;
 }
-main h2,
-main a {
+main section h2,
+main section a {
   max-width: 40vw;
 }
-main h2 {
+main section h2 {
   font-size: 6.5rem;
   font-weight: lighter;
   line-height: 8rem;
   color: var(--color-ft-main);
 }
-main a {
+main section a {
   margin-top: 2rem;
   padding: 2.2rem 4rem;
   font-size: 2rem;
@@ -111,49 +113,62 @@ footer h2 {
 footer p {
   font-size: 1.4rem;
 }
-
-footer form {
-  width: 40%;
-  margin: 1rem auto;
+footer p.warning {
+  display: none;
+  max-width: 32rem;
+  margin: 0 auto 2rem;
+  font-weight: bolder;
+  background-color: #e31743;
+  color: #fafafa;
 }
-footer form fieldset {
+footer p.appear {
+  display: block;
+}
+form {
+  width: 40%;
+  margin: 0 auto;
+}
+form fieldset {
   display: flex;
   flex-direction: column;
   padding: 2rem 1rem 1rem;
   border-radius: 0.4rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-footer form fieldset legend {
+form fieldset legend {
   font-size: 2.4rem;
   padding: 0 1rem;
   color: var(--color-ft-footer);
 }
-footer form fieldset label {
+form fieldset label {
   padding: 0.4rem 0;
   font-size: 1.4rem;
 }
 
-footer form fieldset input {
+form fieldset input {
   padding: 1rem 0.6rem;
   background-color: var(--color-bg-form-input);
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-footer form fieldset input:focus {
+form fieldset input:focus {
   outline: none;
   box-shadow: 0 0 1rem rgb(150, 0, 0);
 }
-footer form input:last-child {
+form input:last-child {
   cursor: pointer;
-  max-width: 100%;
+  width: 24rem;
   margin: 1rem auto 0;
-  padding: 1.8rem 6rem;
+  padding: 1.8rem;
+  text-align: center;
   text-transform: uppercase;
   background-color: var(--color-bg-form-submit);
   color: var(--color-ft-form-submit);
   font-size: 1.4rem;
 }
-
+.login-page form input:last-child {
+  width: 32rem;
+}
 /* Arrow btn */
 footer > a {
   outline: none;
@@ -170,4 +185,4 @@ footer > a {
 
 footer > a img {
   color: var(--color-ft-main);
-  }
+}

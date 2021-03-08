@@ -19,15 +19,17 @@
         <h1><img src="./image/mail.png" alt=""> Gmail</h1>
         <nav>
             <ul>
-                <li><a href="#">Pour les pros</a></li>
-                <li><a href="#">Connexion</a></li>
-                <li><a href="#footer">Créer un compte</a></li>
+                <li><a href="#" class="clickLight">Pour les pros</a></li>
+                <li><a href="#" class="clickLight">Connexion</a></li>
+                <li><a href="#footer" class="clickLight">Créer un compte</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h2>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h2>
-        <a href="#footer">Crée un compte</a>
+        <section class="sign-in-page">
+            <h2>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareil</h2>
+            <a href="#footer">Crée un compte</a>
+        </section>
     </main>
     <footer id="footer">
         <h2>Une boîte de reception entièrement repensée</h2>
@@ -37,20 +39,23 @@
             <fieldset>
                 <legend>Créer un compte</legend>
                 <label for="name">Nom *</label>
-                <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                <input type="text" name="name" id="name" placeholder="Votre nom" aria-required="true">
                 <label for="firstName">Prénom *</label>
-                <input type="text" name="firstName" id="firstName" placeholder="Votre prenom" required>
+                <input type="text" name="firstName" id="firstName" placeholder="Votre prenom" aria-required="true">
                 <label for="mail">Mail *</label>
-                <input type="email" name="mail" id="mail" placeholder="Votre mail" required>
+                <input type="email" name="mail" id="mail" placeholder="Votre mail" aria-required="true">
                 <label for="password">Choisir votre mot de passe *</label>
-                <input type="password" name="password" id="password" placeholder="Votre mot de passe" required>
+                <input type="password" name="password" id="password" placeholder="Votre mot de passe"
+                    aria-required="true">
                 <input type="submit" value="Valider votre compte">
             </fieldset>
         </form>
 
         <a href="#footer" aria-hidden="true" tabindex='-1'><img src="./image/arrow.png" alt="arrow"></a>
     </footer>
-    <script src="./js/app.js"></script>
+    <script src="./js/navBar.js"></script>
+    <script src="./js/verifFormulaire.js"></script>
+    <script src="./js/sessionStorage.js"></script>
 </body>
 
 </html>
