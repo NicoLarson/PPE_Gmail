@@ -2,8 +2,8 @@
   --color-bg: #fafafa;
   --color-bg-btn: #9f281d;
 
-  --color-ft-white:#fafafa;
-  --color-ft-black:#222;
+  --color-ft-white: #fafafa;
+  --color-ft-black: #222;
 
   --color-ft-h1: #888;
   --color-ft-nav-select: #fff;
@@ -19,7 +19,7 @@
 
   --color-bg-arrow-btn: #9f281d;
 
-  --color-success:#2ecc71;
+  --color-success: #2ecc71;
   --color-error: #e31743;
 }
 /* Header */
@@ -99,13 +99,11 @@ main section a {
   height: 100vh;
 }
 .login-page h2 {
-  color: var(--color-ft-black);
-  margin: 8rem 0 2rem;
-  padding: 1rem 2rem;
-  font-size: 4rem;
+  padding: 10rem 0 2rem;
   text-align: center;
-  font-weight: 400;
-  border-radius: 0.4rem;
+  font-size: 3rem;
+  font-weight: lighter;
+  color: var(--color-ft-black);
 }
 .login-page h2.success {
   background-color: var(--color-success);
@@ -148,15 +146,15 @@ footer p {
   font-size: 1.4rem;
 }
 footer p.warning {
-  display: none;
+  display: block;
   max-width: 32rem;
   margin: 0 auto 2rem;
   font-weight: bolder;
-  background-color: var(--color-error);
-  color: #fafafa;
+  background-color: var(--color-bg);
+  color: var(--color-bg);
 }
 footer p.appear {
-  display: block;
+  background-color: var(--color-error);
 }
 form {
   width: 40%;
@@ -206,7 +204,7 @@ form fieldset input:last-child:active {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 .login-page form input:last-child {
-  width: 32rem;
+  width: 24rem;
 }
 /* Arrow btn */
 footer > a {

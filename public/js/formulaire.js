@@ -7,7 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let passwordRegex = /^[a-zA-Z!"#\$%&'\(\)\*\+,-\.\/:;<=>\?@[\]\^_`\{\|}~]{6,30}$/
 
     let form = document.querySelector('footer form')
+
     let addWarning = document.createElement('p')
+
+
+    let addInSessionStorage = (inputName, inputFirstName, inputMail, inputPassword) => {
+        sessionStorage.setItem("name", inputName)
+        sessionStorage.setItem("firstName", inputFirstName)
+        sessionStorage.setItem("mail", inputMail)
+        sessionStorage.setItem("password", inputPassword)
+    }
+
 
     let signInForm = {
         name: document.querySelector('#name'),
@@ -20,10 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 addWarning.classList.add("appear")
                 return false
             } else if (nameRegex.test(this.name.value) && nameRegex.test(this.firstName.value) && mailRegex.test(this.mail.value) && passwordRegex.test(this.password.value)) {
-                sessionStorage.setItem("name", this.name.value)
-                sessionStorage.setItem("firstName", this.firstName.value)
-                sessionStorage.setItem("mail", this.mail.value)
-                sessionStorage.setItem("password", this.password.value)
+                addInSessionStorage(this.name.value, this.firstName.value, this.mail.value, this.password.value)
                 addWarning.classList.remove("appear")
                 return true
             } else {
@@ -34,13 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
     submitBtn.addEventListener('click', (e) => {
-        e.preventDefault()
-        console.log(signInForm.name.value + "   " + signInForm.mail.value)
-        signInForm.formVerification() ? document.location.assign("connection.html") : false
+        signInForm.formVerification() ? document.location.assign("index.php?action=logIn") : e.preventDefault()
     })
 
     // Warning
+    addWarning.innerText = "Veuillez remplir tous les champs"
     addWarning.classList.add("warning")
     form.prepend(addWarning)
 

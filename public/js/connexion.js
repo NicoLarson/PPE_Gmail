@@ -48,7 +48,4 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-    /* Focus CONNECTION nav*/
-    let menuList = document.querySelectorAll("header nav ul li a");
-    menuList[1].classList.add('clickDark')
 })
