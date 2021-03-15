@@ -7,40 +7,46 @@ document.addEventListener('DOMContentLoaded', () => {
     let passwordRegex = /^[a-zA-Z!"#\$%&'\(\)\*\+,-\.\/:;<=>\?@[\]\^_`\{\|}~]{6,30}$/
 
     let form = document.querySelector('footer form')
+
     let addWarning = document.createElement('p')
 
+    let addInSessionStorage = (name, firstName, mail, password) => {
+        sessionStorage.setItem("name", name)
+        sessionStorage.setItem("firstName", firstName)
+        sessionStorage.setItem("mail", mail)
+        sessionStorage.setItem("password", password)
+    }
+
     let signInForm = {
-        name: document.querySelector('#name'),
+        nom: document.querySelector('#nom'),
         firstName: document.querySelector('#firstName'),
         mail: document.querySelector('#mail'),
         password: document.querySelector('#password'),
         formVerification: () => {
-            if (this.name.value == '' || this.firstName.value == '' || this.mail.value == '' || this.password.value == '') {
+            if (this.nom.value == '' || this.firstName.value == '' || this.mail.value == '' || this.password.value == '') {
                 addWarning.innerText = "Veuillez remplir tous les champs"
                 addWarning.classList.add("appear")
                 return false
-            } else if (nameRegex.test(this.name.value) && nameRegex.test(this.firstName.value) && mailRegex.test(this.mail.value) && passwordRegex.test(this.password.value)) {
-                sessionStorage.setItem("name", this.name.value)
-                sessionStorage.setItem("firstName", this.firstName.value)
-                sessionStorage.setItem("mail", this.mail.value)
-                sessionStorage.setItem("password", this.password.value)
-                addWarning.classList.remove("appear")
-                return true
-            } else {
+            } else if (!(nameRegex.test(this.nom.value) && nameRegex.test(this.firstName.value) && mailRegex.test(this.mail.value) && passwordRegex.test(this.password.value))) {
                 addWarning.innerText = "Veuillez verifier vos saisis"
                 addWarning.classList.add("appear")
                 return false
+            } else {
+                addInSessionStorage(this.nom.value, this.firstName.value, this.mail.value, this.password.value)
+                addWarning.classList.remove("appear")
+                return true
+
             }
         }
     }
 
     submitBtn.addEventListener('click', (e) => {
         e.preventDefault()
-        console.log(signInForm.name.value + "   " + signInForm.mail.value)
         signInForm.formVerification() ? document.location.assign("connection.html") : false
     })
 
     // Warning
+    addWarning.innerText = "Veuillez remplir tous les champs"
     addWarning.classList.add("warning")
     form.prepend(addWarning)
 

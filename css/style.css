@@ -102,9 +102,8 @@ main section a {
   color: var(--color-ft-black);
   margin: 8rem 0 2rem;
   padding: 1rem 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
-  font-weight: 400;
   border-radius: 0.4rem;
 }
 .login-page h2.success {
@@ -148,15 +147,14 @@ footer p {
   font-size: 1.4rem;
 }
 footer p.warning {
-  display: none;
   max-width: 32rem;
   margin: 0 auto 2rem;
   font-weight: bolder;
-  background-color: var(--color-error);
+  background-color: var(--color-bg);
   color: #fafafa;
 }
 footer p.appear {
-  display: block;
+  background-color: var(--color-error);
 }
 form {
   width: 40%;
