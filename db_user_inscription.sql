@@ -6,5 +6,6 @@ create table user_mail (
     nom varchar(255) not null,
     prenom varchar(255) not null,
     mail varchar(255) not null,
-    password varchar(255) not null
+    password varchar(255) not null,
+    UNIQUE (mail)
 );
