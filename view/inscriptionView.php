@@ -16,8 +16,8 @@ ob_start();
         <?= $addUser->addUser() ?>
         <fieldset>
             <legend>Créer un compte</legend>
-            <label for="name">Nom *</label>
-            <input type="text" name="name" id="name" placeholder="Votre nom" aria-required="true">
+            <label for="lastName">Nom *</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Votre nom" aria-required="true">
             <label for="firstName">Prénom *</label>
             <input type="text" name="firstName" id="firstName" placeholder="Votre prenom" aria-required="true">
             <label for="mail">Mail *</label>

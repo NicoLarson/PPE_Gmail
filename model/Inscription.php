@@ -27,11 +27,11 @@ class Inscription extends Manager
 
     function addUser()
     {
-        if (isset($_POST['name'], $_POST['firstName'], $_POST['mail'], $_POST['password'])) {
+        if (isset($_POST['lastName'], $_POST['firstName'], $_POST['mail'], $_POST['password'])) {
             if ($this->isEmailExist($_POST['mail'])) {
                 return "<p>Cette email est déjà utilisé.</p>";
             } else {
-                $this->insertLine($_POST['name'], $_POST['firstName'], $_POST['mail'], $_POST['password']);
+                $this->insertLine($_POST['lastName'], $_POST['firstName'], $_POST['mail'], $_POST['password']);
                 return "<p>insertion ligne success.</p>";
             }
         }

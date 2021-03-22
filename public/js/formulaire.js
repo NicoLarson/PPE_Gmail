@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let addInSessionStorage = (inputName, inputFirstName, inputMail, inputPassword) => {
-        sessionStorage.setItem("name", inputName)
+        sessionStorage.setItem("lastName", inputName)
         sessionStorage.setItem("firstName", inputFirstName)
         sessionStorage.setItem("mail", inputMail)
         sessionStorage.setItem("password", inputPassword)
@@ -20,17 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     let signInForm = {
-        name: document.querySelector('#name'),
+        lastName: document.querySelector('#lastName'),
         firstName: document.querySelector('#firstName'),
         mail: document.querySelector('#mail'),
         password: document.querySelector('#password'),
         formVerification: () => {
-            if (this.name.value == '' || this.firstName.value == '' || this.mail.value == '' || this.password.value == '') {
+            if (this.lastName.value == '' || this.firstName.value == '' || this.mail.value == '' || this.password.value == '') {
                 addWarning.innerText = "Veuillez remplir tous les champs"
                 addWarning.classList.add("appear")
                 return false
-            } else if (nameRegex.test(this.name.value) && nameRegex.test(this.firstName.value) && mailRegex.test(this.mail.value) && passwordRegex.test(this.password.value)) {
-                addInSessionStorage(this.name.value, this.firstName.value, this.mail.value, this.password.value)
+            } else if (nameRegex.test(this.lastName.value) && nameRegex.test(this.firstName.value) && mailRegex.test(this.mail.value) && passwordRegex.test(this.password.value)) {
+                addInSessionStorage(this.lastName.value, this.firstName.value, this.mail.value, this.password.value)
                 addWarning.classList.remove("appear")
                 return true
             } else {

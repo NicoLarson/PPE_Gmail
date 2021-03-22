@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+menuList[2].addEventListener('click',()=>{
+    sessionStorage.clear();
+})
+
+
 });
 
 

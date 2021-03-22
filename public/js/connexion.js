@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let message = document.querySelector('main section h2')
 
-    let sessionName = sessionStorage.getItem('name')
+    let sessionName = sessionStorage.getItem('lastName')
     let sessionFirstName = sessionStorage.getItem('firstName')
     let sessionMail = sessionStorage.getItem('mail')
     let sessionPassword = sessionStorage.getItem('password')
